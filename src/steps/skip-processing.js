@@ -12,7 +12,7 @@ function hasActiveEnergy (reading) {
 
 async function isPodOrPodAnz (sensor) {
     return !!(
-        sensor && (sensor.type === "pod" || sensor.type === "pod-anz")
+        sensor && (sensor.type === "pod" /* || sensor.type === "pod-anz" */)
     );
 }
 
