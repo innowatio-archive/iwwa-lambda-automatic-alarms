@@ -1,0 +1,54 @@
+{
+  "name": "iwwa-lambda-automatic-alarms",
+  "version": "1.0.0",
+  "description": "Trigger automatic alarms",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/innowation/iwwa-lambda-automatic-alarms.git"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.2.32",
+    "babel": "^5.8.35",
+    "bluebird": "^3.1.4",
+    "dotenv": "^1.2.0",
+    "kinesis-router": "^1.2.1",
+    "moment": "^2.11.1",
+    "moment-timezone": "^0.5.0",
+    "mongodb": "^2.1.4",
+    "node-uuid": "^1.4.7",
+    "ramda": "^0.19.1"
+  },
+  "devDependencies": {
+    "babel": "^5.6.23",
+    "babel-core": "^5.7.4",
+    "babel-eslint": "^4.1.6",
+    "babel-plugin-rewire": "^0.1.7",
+    "chai": "^3.1.0",
+    "chai-as-promised": "^5.1.0",
+    "codecov": "^1.0.1",
+    "eslint": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-spawn-mocha": "^2.2.1",
+    "gulp-zip": "^3.0.2",
+    "istanbul": "^0.3.17",
+    "lambda-deploy": "^2.1.0",
+    "mocha": "^2.2.5",
+    "pro-gulp": "^0.3.0",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
+  },
+  "scripts": {
+    "clean": "rimraf coverage",
+    "coverage": "NODE_PATH=src NODE_ENV=test babel-node $(npm bin)/isparta cover $(npm bin)/_mocha -- --recursive",
+    "codecov": "codecov",
+    "deploy": "gulp deploy",
+    "dev": "npm test -- --watch",
+    "lint": "eslint src test",
+    "test": "NODE_PATH=src NODE_ENV=test mocha --compilers js:babel/register --recursive"
+  },
+  "author": "Team Wattellina <wattellina@mondora.com>",
+  "license": "Apache-2.0"
+}
